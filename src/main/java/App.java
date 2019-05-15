@@ -11,6 +11,6 @@ public class App{
         System.out.println("Enter a number you would like to use as the key for the encryption formula:");
         int inputtedKey = scanner.nextInt();
         String encryptedWord = CaesarCipher.encryptName(inputtedName,inputtedKey);
-        System.out.println("Your encryption for " + inputtedName + "is: " + encryptedWord);
+        System.out.println("Your encryption for " + inputtedName + " is: " + encryptedWord);
     }
 }
