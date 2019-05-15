@@ -12,7 +12,6 @@ public class CaesarCipher {
         int length = name.length();
         for (int i = 0; i <=length; i++) {
             char character = name.charAt(i);
-            character += key;
             char ch = (char) (character + key);
             result += ch;
         }
