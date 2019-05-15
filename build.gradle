@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+archivesBaseName = "caesar-cipher"
+version = '1.0'
+mainClassName = "CaesarCipher"
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.12'
+}

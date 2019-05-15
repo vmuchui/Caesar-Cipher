@@ -12,5 +12,8 @@ public class CaesarCipherTest {
         assertEquals(weare,expected.encryptName(weare));
     }
     @Test
-    public void encryptName_
+    public void encryptName_returnsAnEncryptedString_String(){
+        CaesarCipher expectedResult = new CaesarCipher();
+        assertEquals(y,expectedResult.encryptName(1));
+    }
 }
