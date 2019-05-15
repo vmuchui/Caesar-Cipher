@@ -10,7 +10,7 @@ public class CaesarCipher {
         } 
         String result = "";
         int length = name.length();
-        for (int i = 0; i <=length; i++) {
+        for (int i = 0; i <=length-1; i++) {
             char character = name.charAt(i);
             char ch = (char) (character + key);
             result += ch;
