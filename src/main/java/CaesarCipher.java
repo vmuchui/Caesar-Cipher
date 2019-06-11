@@ -15,42 +15,42 @@ public class CaesarCipher {
     public String getName() {
         return mName;
     }
-    public static String encrypt(CaesarCipher caesar) {
-        if (caesar.mKey > 26) {
-            caesar.mKey = caesar.mKey%26;
+    public String encrypt() {
+        if (this.mKey > 26) {
+            this.mKey = this.mKey%26;
         }
-        else if(caesar.mKey<0) {
-            caesar.mKey = (caesar.mKey%26) + 26;
+        else if(this.mKey<0) {
+            this.mKey = 0;
         } 
         String result = "";
-        int length = caesar.mName.length();
+        int length = this.mName.length();
         for (int i = 0; i <=length-1; i++) {
-            char character = caesar.mName.charAt(i);
-            char ch = (char) (character + caesar.mKey);
+            char character = this.mName.charAt(i);
+            char ch = (char) (character + this.mKey);
+            if (ch > 'z') {
+                ch = (char) ('`' + this.mKey);
+            }
             result += ch;
         }
-
-
-
         return result;
     }
-    public static String decrypt(CaesarCipher caesar) {
-        if (caesar.mKey > 26) {
-            caesar.mKey = caesar.mKey%26;
+    public String decrypt() {
+        if (this.mKey > 26) {
+            this.mKey = this.mKey%26;
         }
-        else if(caesar.mKey<0) {
-            caesar.mKey = (caesar.mKey%26) + 26;
+        else if(this.mKey<0) {
+            this.mKey = 0;
         } 
         String result = "";
-        int length = caesar.mName.length();
+        int length = this.mName.length();
         for (int i = 0; i <=length-1; i++) {
-            char character = caesar.mName.charAt(i);
-            char ch = (char) (character - caesar.mKey);
+            char character = this.mName.charAt(i);
+            char ch = (char) (character - this.mKey);
+            if (ch< 'a') {
+                ch = (char) ('{' - this.mKey);
+            }
             result += ch;
         }
-
-
-
         return result;
     }
 }
