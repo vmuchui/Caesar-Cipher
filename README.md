@@ -19,8 +19,8 @@
 ## BDD
 |input| output
 |----|----
-|word|prompted to enter a key
-|key|returns the encrypted message.
+|String & Integer|String.
+
 #### Known Bugs
 * In case of of any bugs found please contact using the information below.
 #### Contact Information
