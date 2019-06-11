@@ -10,11 +10,11 @@ public class App{
         boolean programRunning = true;
         while (programRunning) {
             System.out.println("Welcome to Caesar-Cipher:-) What would you like to do? Enter one of the following options: encrypt, decrypt or exit");
-            String inputChoice = myScanner.nextLine();
+            String inputChoice = myConsole.readLine();
             
             if (inputChoice.equals("encrypt")) {
                 System.out.println("Enter the word you would like to encrypt: ");
-                String inputtedName = myScanner.nextLine();
+                String inputtedName = myConsole.readLine();
                 System.out.println("Enter the key you would like to use for your encryption!");        
                 int inputtedKey = myScanner.nextInt();       
                 CaesarCipher createdCaesarCipher = new CaesarCipher(inputtedName, inputtedKey);          
@@ -23,7 +23,7 @@ public class App{
                 System.out.println("Thank you!!");
             }else if (inputChoice.equals("decrypt")) {
                 System.out.println("Enter the word you would like to decrypt: ");
-                String inputtedName = myScanner.nextLine();
+                String inputtedName = myConsole.readLine();
                 System.out.println("Enter the key to use for your decryption!");        
                 int inputtedKey = myScanner.nextInt();       
                 CaesarCipher createdCaesarCipher = new CaesarCipher(inputtedName, inputtedKey);          
