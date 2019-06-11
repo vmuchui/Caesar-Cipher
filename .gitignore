@@ -36,3 +36,7 @@ Thumbs.db
 ############
 build/
 .gradle/
+.iml
+bin/
+.settings/
+.vscode/
