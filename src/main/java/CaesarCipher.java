@@ -29,6 +29,8 @@ public class CaesarCipher {
             char ch = (char) (character + this.mKey);
             if (ch > 'z') {
                 ch = (char) ('`' + this.mKey);
+            }else if (ch > 'Z') {
+                ch = (char) ('@' + this.mKey);
             }
             result += ch;
         }
@@ -48,6 +50,8 @@ public class CaesarCipher {
             char ch = (char) (character - this.mKey);
             if (ch< 'a') {
                 ch = (char) ('{' - this.mKey);
+            }else if (ch < 'A') {
+                ch = (char) ('[' - this.mKey);
             }
             result += ch;
         }
